@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Финансовый трекер расходов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Финансовый трекер расходов</h1>
+        <div class="form-block">
+            <input type="number" id="budget" placeholder="Введите бюджет">
+            <button onclick="saveBudget()">Сохранить бюджет</button>
+        </div>
+        <div class="form-block">
+            <input type="date" id="date">
+            <input type="text" id="category" placeholder="Категория">
+            <input type="number" id="amount" placeholder="Сумма расхода">
+            <button onclick="addExpense()">Добавить расход</button>
+        </div>
+        <div class="info">
+            <p>Бюджет: <span id="budgetValue">0</span> руб.</p>
+            <p>Потрачено: <span id="totalExpense">0</span> руб.</p>
+            <p>Остаток: <span id="rest">0</span> руб.</p>
+            <p id="warning"></p>
+        </div>
+        <h2>История расходов</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Категория</th>
+                    <th>Сумма</th>
+                    <th>Удалить</th>
+                </tr>
+            </thead>
+            <tbody id="list"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
